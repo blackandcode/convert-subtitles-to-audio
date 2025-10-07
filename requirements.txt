@@ -1,0 +1,6 @@
+openai>=1.40.0
+python-dotenv>=1.0.1
+pydub>=0.25.1
+tenacity>=8.2.3
+srt>=3.5.3
+cyrtranslit>=1.1.0
