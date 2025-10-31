@@ -26,6 +26,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+input-transliterated.srt
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -131,5 +132,10 @@ dmypy.json
 # TTS cache directory
 .cache/
 
+# TTS output directory
+output/
+
 # Exclude temporary files
 TMP
+
+*.mp3

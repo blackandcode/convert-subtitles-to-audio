@@ -1,0 +1,7 @@
+1
+00:00:05,740 --> 00:00:16,540
+Ovo što vidite je početna landing strana platforme za konkurse. Dakle, ovo predstavlja javno dostupni dio portala koji vide svi korisnici, uključujući anonimne korisnike.
+
+2
+00:00:17,530 --> 00:00:37,080
+U zavisnosti od potrebe klijenta početna stranica može drugačije da se napravi. Konkretno na ovom primjeru smo prikazali sve direktorate koji postoje unutar ministarstva. Klikom na neki od direktorata se otvara stranica gdje su prikazani svi javni pozivi ili konkursi za taj direktorat.

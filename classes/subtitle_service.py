@@ -13,8 +13,9 @@ from cyrtranslit import to_cyrillic
 class SubtitleService:
     """Handle subtitle loading and optional transliteration."""
 
-    def __init__(self, transliterate: bool = True) -> None:
+    def __init__(self, transliterate: bool = True, cache_dir: Path | None = None) -> None:
         self.transliterate = transliterate
+        self.cache_dir = cache_dir
 
     def load(self, source: Path) -> List[srt.Subtitle]:
         """Load and optionally transliterate subtitles from the given SRT file path."""
@@ -33,8 +34,13 @@ class SubtitleService:
         if self._is_cyrillic(source):
             return source
 
-        # Create transliterated copy
-        transliterated_path = source.parent / "input-transliterated.srt"
+        # Create transliterated copy in cache directory if available
+        if self.cache_dir:
+            self.cache_dir.mkdir(parents=True, exist_ok=True)
+            transliterated_path = self.cache_dir / "input-transliterated.srt"
+        else:
+            transliterated_path = source.parent / "input-transliterated.srt"
+        
         self._transliterate_file(source, transliterated_path)
         return transliterated_path
 
