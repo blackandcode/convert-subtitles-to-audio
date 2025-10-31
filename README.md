@@ -49,7 +49,7 @@ python3 main.py --provider elevenlabs
 # Use Google Cloud TTS
 python3 main.py --provider google
 
-# Use OpenAI (default)
+# Use OpenAI
 python3 main.py --provider openai
 ```
 
